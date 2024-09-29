@@ -1,0 +1,602 @@
+@font-face {
+    font-family: 'Moderniz';
+    src: url('Moderniz.otf') format('opentype');
+    font-weight: normal; /* You can specify bold, italic, etc. */
+    font-style: normal; /* You can specify italic, oblique, etc. */
+}
+
+
+/* Reset margin and padding for body and html */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white; /* Change to your preferred color */
+    color: black; /* Change text color as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top of everything */
+}
+
+#content {
+    display: block; /* Default is hidden until loaded */
+}
+
+/* Set up background video and overlay */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Apply blur effect on the video */
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px); /* Add blur to the video */
+}
+
+/* Black overlay to tint the background */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Black tint with 70% opacity */
+}
+
+/* Independent top-right corner styling */
+.top-right {
+    position: fixed;
+    top: 0;          
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    font-size: 0.6rem; /* Smaller size for Portfolio text */
+    font-family: 'Moderniz', sans-serif;
+    color: white;
+    z-index: 2;  /* Ensure it is on top of other content */
+    opacity: 50%;
+}
+
+/* Typing effect text styling */
+.typing-effect-container {
+    position: absolute;
+    top: 0;          
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    font-size: 0.9rem; /* Smaller size for Portfolio text */
+    font-family: 'Moderniz', sans-serif;
+    color: white;
+    z-index: 1; 
+}
+
+#typing-text {
+    position: absolute;
+    top: 0px; /* Adjust this value to move the text up */
+    left: 50px; /* Adjust this value to move the text left */
+    margin: 0;
+    padding-top: 250px; /* Keep as is or adjust if needed */
+    padding-left: 380px; /* Keep as is or adjust if needed */
+    font-size: 1.5rem;
+    color: white;
+    white-space: pre-wrap; /* Ensures line breaks are respected */
+}
+
+
+/* Content styling */
+.content {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    color: white;
+    font-family: 'Moderniz', sans-serif;
+    text-align: center;
+    z-index: 1;
+    max-width: 1500px; 
+    width: 100%;
+}
+body {
+    background-image: linear-gradient(to top right, #8B5CF6, #EC4899);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+}
+
+.poster{
+    position: absolute;
+    text-align: center;
+    font-size: 1.8rem;
+    padding-top: 310px;
+    padding-left: 625px;
+    
+}
+.posts{
+    position: absolute;
+    text-align: center;
+    font-family: 'Moderniz', sans-serif;
+    color: #fff;
+    font-size: 1.8rem;
+    padding-top: 3240px;
+    padding-left: 150;
+    
+}
+
+.slider3 {
+    position: fixed;
+    margin-top: 100px;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    top: 2420px;
+    padding-top: 150px;
+} 
+
+.thumb{
+    font-family: 'Moderniz', sans-serif;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    font-size: 1.8rem;
+    padding-top: 4650px;
+    padding-left: 60px;
+}
+.log{
+    font-family: 'Moderniz', sans-serif;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    font-size: 1.8rem;
+    padding-top: 3050px;
+    padding-left: 400px; 
+}
+.short{
+    font-family: 'Moderniz', sans-serif;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    font-size: 1.8rem;
+    padding-top: 3750px;
+    padding-left: 430px; 
+}
+.item3 {
+    position: absolute;
+    width: 640px; 
+    height: 360px; 
+    text-align: center; 
+    background-color: #fff;
+    border-radius: 10px;
+
+    transition: 0.5s;
+    left: 30%;
+    top: 200px;
+    overflow: hidden; 
+}
+
+.item3 img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+    transition: all 0.5s ease;
+}
+.item3 :hover{
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.8),  
+                inset 0 0 100px rgba(255, 105, 180, 0.5); 
+    filter: brightness(1.4); 
+}
+
+#next3, #prev3 {
+    position: absolute;
+    font-size: xxx-large;
+    background: none;
+    border: none;
+    color: #fff;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+#next3:hover, #prev3:hover {
+    opacity: 1;
+}
+
+#next3 { right: 50px; top: 40%; }
+#prev3 { left: 50px; top: 40%; }
+
+
+.slider1 {
+    position: fixed;
+    margin-top: 100px;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    top: 250px;
+    padding-top: 150px;
+}
+
+.slider4 {
+    position: fixed;
+    margin-top: 100px;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    top: 3000px;
+    padding-top: 150px;
+}
+
+.slider2 {
+    position: fixed;
+    margin-top: 100px;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    top: 1720px;
+    padding-top: 150px;
+    right: 20px;
+}
+
+.item {
+    position: absolute;
+    width: 432px; /* Adjust as necessary */
+    height: 540px; /* Adjust as necessary */
+    text-align: center; /* Center the image */
+    background-color: #fff;
+    border-radius: 10px;
+
+    transition: 0.5s;
+    left: 35%;
+    top: 200px;
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.item img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Match slide's border radius */
+    transition: all 0.5s ease;
+}
+.item :hover{
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.8),  /* Outer glow */
+                inset 0 0 100px rgba(255, 105, 180, 0.5); /* Inner glow */
+    filter: brightness(1.4); /* Increase brightness of the entire window and image */
+}
+
+.item4 {
+    position: absolute;
+    width: 540px; /* Adjust as necessary */
+    height: 540px; /* Adjust as necessary */
+    text-align: center; /* Center the image */
+    background-color: #fff;
+    border-radius: 10px;
+
+    transition: 0.5s;
+    left: 33%;
+    top: 200px;
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.item4 video {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Match slide's border radius */
+    transition: all 0.5s ease;
+}
+.item4 :hover{
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.8),  /* Outer glow */
+                inset 0 0 100px rgba(255, 105, 180, 0.5); /* Inner glow */
+    filter: brightness(1.4); /* Increase brightness of the entire window and image */
+}
+
+
+
+.item2 {
+    position: absolute;
+    width: 540px; /* Adjust as necessary */
+    height: 540px; /* Adjust as necessary */
+    text-align: center; /* Center the image */
+    background-color: #fff;
+    border-radius: 10px;
+
+    transition: 0.5s;
+    left: 35%;
+    top: 200px;
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.item2 img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Match slide's border radius */
+    transition: all 0.5s ease;
+}
+.item2 :hover{
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.8),  /* Outer glow */
+                inset 0 0 100px rgba(255, 105, 180, 0.5); /* Inner glow */
+    filter: brightness(1.6); /* Increase brightness of the entire window and image */
+}
+.adore{
+    position: absolute;
+    text-align: center;
+    width: 500px;
+    font-family: 'Moderniz', sans-serif;
+    color: #fff;
+    font-size: 1.8rem;
+    padding-top: 8900px;
+    padding-left: 40px;
+}
+
+ .album{
+    position: absolute;
+    text-align: center;
+    font-family: 'Moderniz', sans-serif;
+    color: #fff;
+    font-size: 1.8rem;
+    padding-top: 1850px;
+    padding-left: 10px;
+}
+
+.albimg {
+    position: absolute;
+    
+    /* box-sizing: border-box; */
+    
+    margin: 0; /* or adjust as needed */
+    overflow: hidden;
+    /* display: inline-block; */
+    max-width: 100%;
+    height: auto;
+    padding-top: 2500px;
+    padding-left: 0px;
+    
+    transition: all 0.5s ease;
+
+} 
+.albimg:hover{
+    border-radius: 10px;
+    filter: brightness(2); /* Increase brightness of the entire window and image */
+
+}
+
+#next, #prev {
+    position: absolute;
+    font-size: xxx-large;
+    background: none;
+    border: none;
+    color: #fff;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+#next:hover, #prev:hover {
+    opacity: 1;
+}
+
+#next { right: 50px; top: 40%; }
+#prev { left: 50px; top: 40%; }
+
+
+#next4, #prev4 {
+    position: absolute;
+    font-size: xxx-large;
+    background: none;
+    border: none;
+    color: #fff;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+#next4:hover, #prev4:hover {
+    opacity: 1;
+}
+
+#next4 { right: 50px; top: 40%; }
+#prev4 { left: 50px; top: 40%; }
+
+
+
+#next2, #prev2 {
+    position: absolute;
+    font-size: xxx-large;
+    background: none;
+    border: none;
+    color: #fff;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+#next2:hover, #prev2:hover {
+    opacity: 1;
+}
+
+#next2 { right: 50px; top: 40%; }
+#prev2 { left: 50px; top: 40%; }
+
+
+
+h1 {
+    font-size: 2.5rem;   /* Adjust the font size */
+    font-weight: normal;
+    line-height: 1.2;    /* Adjust line height for better spacing */
+}
+/* Glass-like window styling */
+.glass-window {
+    position: absolute;             
+    top: calc(100px + 60px);       
+    left: 10%;                     
+    transform: translateX(-50%);   
+    width: 150px;                  
+    height: 200px;                 
+    background: rgba(211, 211, 211, 0.1);  /* Light gray with 10% opacity for more transparency */
+    border-radius: 20px;           
+    backdrop-filter: blur(10px);   
+    padding: 20px;                 
+    color: black;                  
+    z-index: 2;                    
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), /* Shadow for depth */
+                inset 0 2px 8px rgba(255, 255, 255, 0.5); /* Light reflection */
+    transition: all 0.5s ease; /* Smooth transition for the glow effect */
+}
+
+/* Glow effect on hover */
+.glass-window:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8),  /* Outer glow */
+                inset 0 0 20px rgba(255, 105, 180, 0.5); /* Inner glow */
+    filter: brightness(2); /* Increase brightness of the entire window and image */
+}
+
+.glass-image {
+    width: 100%;                  /* Full width of the glass window */
+    height: auto;                 /* Maintain aspect ratio */
+    border-radius: 20px;         /* Match the border radius of the glass window */
+    margin-bottom: 10px;         /* Space between image and text */
+    object-fit: cover;           /* Cover the area without stretching */
+}
+
+/* Gradient text for "Visuals" */
+.gradient-text {
+    font-size: 3rem;
+    /* font-weight: bold; */
+    font-family: 'Moderniz', sans-serif;
+    animation: colorFlow 3s linear infinite;
+}
+
+@keyframes colorFlow {
+    0% {
+        color: #ff00cc; /* Pink */
+    }
+    25% {
+        color: #3333ff; /* Blue */
+    }
+    50% {
+        color: #66ff33; /* Green */
+    }
+    75% {
+        color: #ffcc00; /* Yellow */
+    }
+    100% {
+        color: #ff00cc; /* Pink */
+    }
+}
+
+.gradient-text {
+    background-size: 200% 200%;
+}
+
+
+
+
+.reel {
+    position: absolute;
+    width: 360px; /* Adjust as necessary */
+    height: 640px; /* Adjust as necessary */
+    text-align: center; /* Center the image */
+    background-color: #fff;
+    border-radius: 10px;
+
+    transition: 0.5s;
+    left: 40%;
+    top: 4050px;
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.reel video {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Match slide's border radius */
+    transition: all 0.5s ease;
+}
+.reel :hover{
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.8),  /* Outer glow */
+                inset 0 0 100px rgba(255, 105, 180, 0.5); /* Inner glow */
+    filter: brightness(1.4); /* Increase brightness of the entire window and image */
+}
+.mute-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.mute-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.button-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* space between buttons */
+    z-index: 999;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.icon-button img {
+    width: 50px;  /* Set your desired width */
+    height: 50px; /* Set your desired height */
+    object-fit: cover; /* Ensures aspect ratio is maintained */
+}
+
+.info-box {
+    position: fixed;
+    bottom: 80px; /* Adjust based on your design */
+    right: 100px; /* Move box further to the left */
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px; /* Increased padding for a bigger box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    font-family: 'monospace', sans-serif; /* Set font family */
+    width: 250px; /* Increased width for the info box */
+}
+
+.close-button {
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 5px; /* Position it at the top right */
+    right: 10px;
+    color: #333; /* Close button color */
+}
+
+
+#preloader{
+    background: #fff url(loader.gif) no-repeat center center;
+    background-size: 5%; 
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
