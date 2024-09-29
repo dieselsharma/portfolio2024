@@ -600,3 +600,89 @@ h1 {
     position: fixed;
     z-index: 10000;
 }
+
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    /* Make the body content fit the screen */
+    body {
+        padding: 10px;
+        display: block;
+        font-size: 0.9rem;
+    }
+    
+    /* Background video adjustments */
+    .video-container {
+        height: auto;
+        position: relative;
+        width: 100%;
+    }
+
+    #background-video {
+        object-fit: contain;
+        height: auto;
+        width: 100%;
+    }
+
+    .top-right {
+        font-size: 0.5rem;
+        right: 10px;
+    }
+
+    /* Adjust the typing effect text */
+    #typing-text {
+        font-size: 1.2rem;
+        padding-left: 20px;
+        padding-top: 150px;
+    }
+
+    /* Adjust content for smaller screen */
+    .content {
+        top: 50px;
+        left: 0;
+        transform: none;
+        padding: 20px;
+    }
+
+    /* Glass window */
+    .glass-window {
+        width: 100px;
+        height: 150px;
+        left: 10%;
+    }
+
+    /* Text sections */
+    .poster, .posts, .thumb, .log, .short, .adore, .album {
+        font-size: 1.2rem;
+        padding-left: 10px;
+        padding-top: 20px;
+    }
+
+    /* Slider adjustments */
+    .slider1, .slider2, .slider3, .slider4 {
+        height: auto;
+        top: auto;
+        margin-top: 20px;
+        padding-top: 10px;
+    }
+
+    .item, .item2, .item3, .item4 {
+        width: 90%;
+        margin: auto;
+    }
+
+    /* Info box adjustments */
+    .info-box {
+        width: 100%;
+        bottom: 20px;
+        right: 0;
+        padding: 15px;
+    }
+
+    .button-container {
+        bottom: 10px;
+        right: 10px;
+        flex-direction: row;
+        gap: 5px;
+    }
+}
